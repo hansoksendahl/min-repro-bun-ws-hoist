@@ -7,17 +7,18 @@ The issue [documented here](https://github.com/oven-sh/bun/issues/533) is that
 hoisting breaks module boundaries. This can lead to unexpected build errors when
 bundling, running code in CI/CD, or deploying.
 
-Furthermore, the issue of implicit dependencies is not limited to packages
-defined in the monorepo, they apply to third party dependencies as well.
+Furthermore, the issue of implicit dependencies (👻-dependencies) is not limited
+to packages defined in the monorepo, it applies to third party dependencies as
+well.
 
 ## Repository Structure
 
 - packages/
   - a/
-  - b/ - has a dependencies on workspace package `a` and third party package
-    `isOdd`.
-  - c/ - has a 👻-dependencies on workspace package `a` and third party package
-    `isOdd`.
+  - b/ - has dependencies on workspace package `a` and third party package
+    `@recon-struct/utils`.
+  - c/ - has 👻-dependencies on workspace package `a` and third party package
+    `@recon-struct/utils`.
 
 ## Resolution
 

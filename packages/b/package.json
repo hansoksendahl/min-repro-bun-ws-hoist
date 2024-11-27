@@ -1,0 +1,15 @@
+{
+  "name": "b",
+  "module": "src/index.ts",
+  "type": "module",
+  "dependencies": {
+    "@recon-struct/utils": "^1.3.4",
+    "a": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
